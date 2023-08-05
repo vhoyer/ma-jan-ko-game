@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuc3yjija6q1n"]
+[gd_scene load_steps=6 format=3 uid="uid://cuc3yjija6q1n"]
 
 [ext_resource type="Script" path="res://modules/Tagarela/Tagarela.gd" id="1_yyj6b"]
 [ext_resource type="Theme" uid="uid://d32jtk103op54" path="res://assets/ui-theme/ui-theme-base.tres" id="2_07xw3"]
+[ext_resource type="LabelSettings" uid="uid://gwq54ovwv6w7" path="res://modules/Tagarela/TagarelaFontStyle.tres" id="3_3nfm8"]
+[ext_resource type="Texture2D" uid="uid://c204bsrjpqarg" path="res://sprites/portraits/usi.png" id="3_u7ko7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llfwr"]
 bg_color = Color(0.211765, 0.184314, 0.223529, 1)
@@ -38,9 +40,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_llfwr")
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
-offset_right = 32.0
-offset_bottom = 8.0
-text = "tatuado"
+offset_right = 29.0
+offset_bottom = 6.0
+text = "usi"
+label_settings = ExtResource("3_3nfm8")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
@@ -48,6 +51,9 @@ offset_left = 2.0
 offset_top = 2.0
 offset_right = 60.0
 offset_bottom = 13.0
+text = "toki, nimi mi li Usi."
+label_settings = ExtResource("3_3nfm8")
+autowrap_mode = 2
 
 [node name="Control" type="Control" parent="Panel"]
 anchors_preset = 0
@@ -56,4 +62,5 @@ offset_top = -27.0
 offset_right = 60.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/Control"]
-position = Vector2(33, -27)
+texture = ExtResource("3_u7ko7")
+centered = false
