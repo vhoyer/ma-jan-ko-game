@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://uxqw14x5j02f"]
+
+[node name="menu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2"]
+layout_mode = 2
+text = "ma jan ko"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="start" type="Button" parent="CanvasLayer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "musi"
+
+[node name="exit" type="Button" parent="CanvasLayer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "weka"

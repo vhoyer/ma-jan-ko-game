@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c0sbwxlumtkex"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 9.0
+offset_right = 40.0
+offset_bottom = 9.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 389.0
+offset_top = 88.0
+offset_right = 429.0
+offset_bottom = 93.0
+scale = Vector2(16, 16)
+text = "o musi"
