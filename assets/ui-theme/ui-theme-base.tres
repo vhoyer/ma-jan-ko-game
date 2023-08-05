@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://d32jtk103op54"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://d32jtk103op54"]
 
 [ext_resource type="FontFile" uid="uid://car5qc7vtnqun" path="res://assets/sitelen-ike/sitelen-ike.ttf" id="1_dpavs"]
 
@@ -35,6 +35,14 @@ anti_aliasing = false
 bg_color = Color(0.729412, 0.733333, 0.737255, 1)
 anti_aliasing = false
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skrsr"]
+bg_color = Color(0.101961, 0.0862745, 0.184314, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
 [resource]
 default_font = ExtResource("1_dpavs")
 default_font_size = 3
@@ -46,3 +54,4 @@ Button/styles/focus = SubResource("StyleBoxFlat_wam30")
 Button/styles/hover = SubResource("StyleBoxFlat_8ndkm")
 Button/styles/normal = SubResource("StyleBoxFlat_uvbpi")
 Button/styles/pressed = SubResource("StyleBoxFlat_p00pi")
+Panel/styles/panel = SubResource("StyleBoxFlat_skrsr")
