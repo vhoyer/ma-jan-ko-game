@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://uxqw14x5j02f"]
+[gd_scene load_steps=2 format=3 uid="uid://uxqw14x5j02f"]
+
+[ext_resource type="Theme" uid="uid://bbgaiux3fbgy2" path="res://assets/ui-theme/ui-theme-primary.tres" id="1_re6k2"]
 
 [node name="menu" type="Node2D"]
 
@@ -23,6 +25,7 @@ size_flags_horizontal = 4
 
 [node name="start" type="Button" parent="CanvasLayer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_re6k2")
 text = "musi"
 
 [node name="exit" type="Button" parent="CanvasLayer/VBoxContainer2/VBoxContainer"]
