@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://uxqw14x5j02f"]
 
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_fhs0n"]
-[ext_resource type="Theme" uid="uid://d32jtk103op54" path="res://assets/ui-theme/ui-theme-base.tres" id="2_smsn1"]
+[ext_resource type="Script" path="res://scenes/Menu/menu.gd" id="1_8mb1p"]
+[ext_resource type="Theme" uid="uid://d32jtk103op54" path="res://assets/ui-theme/ui-theme-base.tres" id="2_5hmj1"]
 
 [node name="menu" type="Node2D"]
-script = ExtResource("1_fhs0n")
+script = ExtResource("1_8mb1p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -27,7 +27,7 @@ size_flags_horizontal = 4
 
 [node name="start" type="Button" parent="CanvasLayer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_smsn1")
+theme = ExtResource("2_5hmj1")
 theme_type_variation = &"ButtonPrimary"
 text = "musi"
 
