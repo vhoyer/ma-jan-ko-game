@@ -10,18 +10,10 @@ config_version=5
 
 [application]
 
-config/name="lowrezjam2023"
+config/name="majanko"
 run/main_scene="res://scenes/Menu/menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[dialogic]
-
-glossary/default_case_sensitive=true
-layout/mode=0
-layout/export_overrides={
-"box_size": "Vector2(62, 13)"
-}
 
 [display]
 
