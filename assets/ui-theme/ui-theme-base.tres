@@ -75,5 +75,6 @@ ButtonPrimary/colors/font_pressed_color = Color(1, 1, 1, 1)
 ButtonPrimary/styles/hover = SubResource("StyleBoxFlat_nh31r")
 ButtonPrimary/styles/normal = SubResource("StyleBoxFlat_4frpt")
 ButtonPrimary/styles/pressed = SubResource("StyleBoxFlat_iyj6p")
+Label/constants/line_spacing = 0
 Panel/styles/panel = SubResource("StyleBoxFlat_skrsr")
 RichTextLabel/constants/line_separation = 1

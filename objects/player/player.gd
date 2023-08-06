@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 25
+@export var contain_in_viewport: bool = false
 
 func _ready():
 	$AnimationPlayer.play("RESET_down")
@@ -23,9 +24,11 @@ func _physics_process(_delta):
 	else:
 		$AnimationPlayer.stop()
 	
-	var sprite = $Sprite2D
-	var half_size = sprite.get_rect().size / 2 * sprite.scale
-	var screen_size = get_viewport_rect().size
-	global_position.x = clamp(global_position.x, half_size.x, screen_size.x - half_size.x)
-	global_position.y = clamp(global_position.y, half_size.y, screen_size.y - half_size.y)
+	if (contain_in_viewport):
+		var sprite = $Sprite2D
+		var half_size = sprite.get_rect().size / 2 * sprite.scale
+		var screen_size = get_viewport_rect().size
+		global_position.x = clamp(global_position.x, half_size.x, screen_size.x - half_size.x)
+		global_position.y = clamp(global_position.y, half_size.y, screen_size.y - half_size.y)
+	
 	pass

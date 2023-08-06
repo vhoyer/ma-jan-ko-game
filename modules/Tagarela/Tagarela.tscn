@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuc3yjija6q1n"]
+[gd_scene load_steps=5 format=3 uid="uid://cuc3yjija6q1n"]
 
 [ext_resource type="Script" path="res://modules/Tagarela/Tagarela.gd" id="1_yyj6b"]
 [ext_resource type="Theme" uid="uid://d32jtk103op54" path="res://assets/ui-theme/ui-theme-base.tres" id="2_07xw3"]
-[ext_resource type="LabelSettings" uid="uid://gwq54ovwv6w7" path="res://modules/Tagarela/TagarelaFontStyle.tres" id="3_3nfm8"]
 [ext_resource type="Texture2D" uid="uid://c204bsrjpqarg" path="res://sprites/portraits/usi.png" id="3_u7ko7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llfwr"]
@@ -14,7 +13,7 @@ anti_aliasing = false
 [node name="Tagarela" type="CanvasLayer"]
 script = ExtResource("1_yyj6b")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Dialog" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 15)
 anchors_preset = 7
 anchor_left = 0.5
@@ -29,23 +28,22 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_07xw3")
 
-[node name="Panel" type="Panel" parent="Panel"]
+[node name="Panel" type="Panel" parent="Dialog"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = -6.0
 offset_right = 33.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_llfwr")
 
-[node name="Label" type="Label" parent="Panel/Panel"]
+[node name="Name" type="Label" parent="Dialog/Panel"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 29.0
-offset_bottom = 6.0
+offset_bottom = 5.0
 text = "usi"
-label_settings = ExtResource("3_3nfm8")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+[node name="Content" type="RichTextLabel" parent="Dialog"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
@@ -54,13 +52,14 @@ offset_bottom = 13.0
 bbcode_enabled = true
 text = "toki,
 nimi mi li [color=green]Usi[/color]."
+scroll_active = false
 
-[node name="Control" type="Control" parent="Panel"]
+[node name="Control" type="Control" parent="Dialog"]
 anchors_preset = 0
 offset_left = 33.0
 offset_top = -27.0
 offset_right = 60.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel/Control"]
+[node name="Portrait" type="Sprite2D" parent="Dialog/Control"]
 texture = ExtResource("3_u7ko7")
 centered = false
