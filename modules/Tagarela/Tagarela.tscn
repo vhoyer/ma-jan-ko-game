@@ -45,15 +45,15 @@ offset_bottom = 6.0
 text = "usi"
 label_settings = ExtResource("3_3nfm8")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 60.0
 offset_bottom = 13.0
-text = "toki, nimi mi li Usi."
-label_settings = ExtResource("3_3nfm8")
-autowrap_mode = 2
+bbcode_enabled = true
+text = "toki,
+nimi mi li [color=green]Usi[/color]."
 
 [node name="Control" type="Control" parent="Panel"]
 anchors_preset = 0

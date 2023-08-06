@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://ra8hdvb543rd"]
+[gd_scene load_steps=3 format=3 uid="uid://ra8hdvb543rd"]
+
+[ext_resource type="PackedScene" uid="uid://e2p2h6tiwhjd" path="res://objects/player/player.tscn" id="1_jiyd8"]
+[ext_resource type="PackedScene" uid="uid://cuc3yjija6q1n" path="res://modules/Tagarela/Tagarela.tscn" id="2_ha0fp"]
 
 [node name="First" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_jiyd8")]
+
+[node name="Tagarela" parent="." instance=ExtResource("2_ha0fp")]

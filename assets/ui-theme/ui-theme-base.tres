@@ -1,6 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://d32jtk103op54"]
-
-[ext_resource type="FontFile" uid="uid://car5qc7vtnqun" path="res://assets/sitelen-ike/sitelen-ike.ttf" id="1_dpavs"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://d32jtk103op54"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wam30"]
 bg_color = Color(0.878431, 0.882353, 0.886275, 0)
@@ -35,6 +33,22 @@ anti_aliasing = false
 bg_color = Color(0.729412, 0.733333, 0.737255, 1)
 anti_aliasing = false
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nh31r"]
+bg_color = Color(0.0862745, 0.670588, 0.223529, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4frpt"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+bg_color = Color(0.129412, 0.729412, 0.270588, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iyj6p"]
+bg_color = Color(0.0980392, 0.560784, 0.207843, 1)
+anti_aliasing = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skrsr"]
 bg_color = Color(0.101961, 0.0862745, 0.184314, 1)
 corner_radius_top_left = 2
@@ -44,7 +58,6 @@ corner_radius_bottom_left = 2
 anti_aliasing = false
 
 [resource]
-default_font = ExtResource("1_dpavs")
 default_font_size = 3
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
@@ -54,4 +67,13 @@ Button/styles/focus = SubResource("StyleBoxFlat_wam30")
 Button/styles/hover = SubResource("StyleBoxFlat_8ndkm")
 Button/styles/normal = SubResource("StyleBoxFlat_uvbpi")
 Button/styles/pressed = SubResource("StyleBoxFlat_p00pi")
+ButtonPrimary/base_type = &"Button"
+ButtonPrimary/colors/font_color = Color(1, 1, 1, 1)
+ButtonPrimary/colors/font_focus_color = Color(1, 1, 1, 1)
+ButtonPrimary/colors/font_hover_color = Color(1, 1, 1, 1)
+ButtonPrimary/colors/font_pressed_color = Color(1, 1, 1, 1)
+ButtonPrimary/styles/hover = SubResource("StyleBoxFlat_nh31r")
+ButtonPrimary/styles/normal = SubResource("StyleBoxFlat_4frpt")
+ButtonPrimary/styles/pressed = SubResource("StyleBoxFlat_iyj6p")
 Panel/styles/panel = SubResource("StyleBoxFlat_skrsr")
+RichTextLabel/constants/line_separation = 1
