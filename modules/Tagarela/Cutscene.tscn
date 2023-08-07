@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://ievrffix5vcq"]
+
+[ext_resource type="Script" path="res://modules/Tagarela/Cutscene.gd" id="1_jfqvm"]
+[ext_resource type="Texture2D" uid="uid://joj1grbfvsi0" path="res://sprites/story/scene1/1.love.png" id="1_ysuxl"]
+[ext_resource type="Texture2D" uid="uid://b8x40pkfyujwc" path="res://sprites/story/scene1/2.tempest.png" id="2_mu51s"]
+[ext_resource type="Texture2D" uid="uid://shpy4day6bym" path="res://sprites/story/scene1/3.forgot.png" id="3_xmyor"]
+[ext_resource type="Texture2D" uid="uid://b2cjf6gb4oqay" path="res://sprites/story/scene1/4.where.png" id="4_oygub"]
+
+[sub_resource type="Animation" id="Animation_y1ed1"]
+resource_name = "story"
+length = 12.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_ysuxl"), ExtResource("2_mu51s"), ExtResource("3_xmyor"), ExtResource("4_oygub")]
+}
+
+[sub_resource type="Animation" id="Animation_wi2wo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_mu51s")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ij0mv"]
+_data = {
+"RESET": SubResource("Animation_wi2wo"),
+"story": SubResource("Animation_y1ed1")
+}
+
+[node name="Cutscene" type="CanvasLayer"]
+script = ExtResource("1_jfqvm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ij0mv")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mu51s")
+centered = false
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

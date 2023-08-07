@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ra8hdvb543rd"]
+[gd_scene load_steps=7 format=3 uid="uid://ra8hdvb543rd"]
 
 [ext_resource type="Texture2D" uid="uid://f2eqn2ja78fo" path="res://sprites/majanko-tileset.png" id="1_w3l7m"]
 [ext_resource type="PackedScene" uid="uid://e2p2h6tiwhjd" path="res://objects/player/player.tscn" id="2_h8cga"]
 [ext_resource type="PackedScene" uid="uid://cuc3yjija6q1n" path="res://modules/Tagarela/Tagarela.tscn" id="3_34uhe"]
+[ext_resource type="PackedScene" uid="uid://ievrffix5vcq" path="res://modules/Tagarela/Cutscene.tscn" id="4_wuame"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jb1ma"]
 texture = ExtResource("1_w3l7m")
@@ -474,6 +475,10 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(720897, 655360, 2, 917510, 589824, 2, 589836, 655360, 0, 589838, 655360, 2, 65550, 524288, 0, 327700, 589824, 1, 851988, 524288, 0, 196608, 655360, 1, 589824, 655360, 1, 655360, 655360, 2, 327681, 589824, 1, 786433, 655360, 0, 2, 524288, 1, 786434, 524288, 1, 851970, 524288, 1, 917506, 524288, 1, 917507, 655360, 0, 131076, 589824, 2, 65541, 655360, 0, 786437, 524288, 1, 131078, 589824, 2, 327686, 589824, 2, 589830, 524288, 1, 720902, 589824, 0, 458759, 655360, 2, 851975, 589824, 0, 1048583, 589824, 2, 65544, 589824, 1, 262152, 589824, 2, 655368, 655360, 0, 720904, 524288, 1, 65546, 655360, 1, 327690, 589824, 2, 655371, 655360, 0, 1048587, 655360, 0, 720908, 589824, 0, 196621, 655360, 1, 1048589, 655360, 0, 131086, 655360, 2, 393230, 655360, 2, 458766, 655360, 2, 327695, 655360, 1, 65552, 524288, 2, 983056, 655360, 0, 458769, 655360, 1, 524305, 589824, 0, 851987, 524288, 2, 65557, 524288, 0, 458773, 589824, 0, 131072, 589824, 1, 458752, 655360, 0, 720896, 655360, 2, 524289, 524288, 0, 1048579, 589824, 2, 393221, 655360, 1, 524293, 524288, 0, 1048581, 589824, 0, 524294, 524288, 1, 1048582, 589824, 2, 393223, 524288, 0, 589832, 589824, 1, 917512, 589824, 1, 262154, 655360, 0, 524298, 655360, 1, 11, 589824, 0, 458764, 589824, 0, 917518, 524288, 2, 1048591, 589824, 2, 262160, 655360, 0, 786449, 655360, 1, 917523, 524288, 0, 524308, 655360, 2, 589844, 524288, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_h8cga")]
+position = Vector2(32, 32)
 
 [node name="Tagarela" parent="." instance=ExtResource("3_34uhe")]
+visible = false
+
+[node name="Cutscene" parent="." instance=ExtResource("4_wuame")]
 visible = false
